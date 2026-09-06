@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"dashboard","type":"file","file":"Class/運用ダッシュボード.md","x":-260,"y":-560,"width":520,"height":380,"color":"5"},
+		{"id":"quick-create","type":"text","text":"# クイック作成\n\n```meta-bind-button\nstyle: primary\nlabel: タスク\nid: home-create-task\naction:\n  type: templaterCreateNote\n  templateFile: \"Template/Task.md\"\n  folderPath: \"Pages\"\n```\n```meta-bind-button\nstyle: primary\nlabel: 予定\nid: home-create-schedule\naction:\n  type: templaterCreateNote\n  templateFile: \"Template/Schedule.md\"\n  folderPath: \"Pages\"\n```\n```meta-bind-button\nstyle: primary\nlabel: 思考整理\nid: home-create-thinking\naction:\n  type: templaterCreateNote\n  templateFile: \"Template/Thinking.md\"\n  folderPath: \"Pages\"\n```\n```meta-bind-button\nstyle: primary\nlabel: 備忘録\nid: home-create-memo\naction:\n  type: templaterCreateNote\n  templateFile: \"Template/Memo.md\"\n  folderPath: \"Pages\"\n```\n\n当日の計画は左リボンの「今日のデイリーノートを開く」から。","x":-260,"y":-120,"width":520,"height":540,"color":"3"},
+		{"id":"tasks","type":"file","file":"Class/タスク管理.md","x":-900,"y":-460,"width":540,"height":590,"color":"2"},
+		{"id":"schedule","type":"file","file":"Class/スケジュール管理.md","x":360,"y":-460,"width":540,"height":590,"color":"4"},
+		{"id":"thinking","type":"file","file":"Class/思考整理.md","x":-900,"y":210,"width":540,"height":560,"color":"6"},
+		{"id":"memo","type":"file","file":"Class/備忘録.md","x":360,"y":210,"width":540,"height":560,"color":"1"},
+		{"id":"ai-guide","type":"file","file":"AI運用ガイド.md","x":-260,"y":500,"width":520,"height":540,"color":"5"}
+	],
+	"edges":[
+		{"id":"dashboard-task","fromNode":"dashboard","fromSide":"left","toNode":"tasks","toSide":"top","label":"実行"},
+		{"id":"dashboard-schedule","fromNode":"dashboard","fromSide":"right","toNode":"schedule","toSide":"top","label":"時間"},
+		{"id":"dashboard-quick","fromNode":"dashboard","fromSide":"bottom","toNode":"quick-create","toSide":"top","label":"記録"},
+		{"id":"quick-thinking","fromNode":"quick-create","fromSide":"left","toNode":"thinking","toSide":"top","label":"整理"},
+		{"id":"quick-memo","fromNode":"quick-create","fromSide":"right","toNode":"memo","toSide":"top","label":"保存"},
+		{"id":"quick-guide","fromNode":"quick-create","fromSide":"bottom","toNode":"ai-guide","toSide":"top","label":"使い方"}
+	]
+}

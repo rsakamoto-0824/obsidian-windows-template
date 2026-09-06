@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"question","type":"text","text":"# 問い\n何を決めたい／理解したいかを1文で書く","x":-240,"y":-500,"width":480,"height":180,"color":"5"},
+		{"id":"facts","type":"text","text":"## 確認できた事実\n- 観測・資料で確かめられること\n- 出典へのリンク","x":-760,"y":-220,"width":420,"height":240,"color":"4"},
+		{"id":"hypotheses","type":"text","text":"## 解釈・仮説\n- 事実から推測したこと\n- まだ確かめていない前提","x":340,"y":-220,"width":420,"height":240,"color":"6"},
+		{"id":"options","type":"text","text":"## 選択肢\n1. 選択肢A\n2. 選択肢B\n3. 保留\n\n評価軸: 効果／負担／リスク／可逆性","x":-240,"y":100,"width":480,"height":280,"color":"3"},
+		{"id":"decision","type":"text","text":"## 現時点の判断\n- 選ぶ案:\n- 理由:\n- 見直す条件:","x":-520,"y":500,"width":420,"height":230,"color":"2"},
+		{"id":"next","type":"text","text":"## 次の一手\n- [ ] 次に確認・実行すること\n- 期限:","x":120,"y":500,"width":420,"height":230,"color":"1"}
+	],
+	"edges":[
+		{"id":"q-f","fromNode":"question","fromSide":"left","toNode":"facts","toSide":"top"},
+		{"id":"q-h","fromNode":"question","fromSide":"right","toNode":"hypotheses","toSide":"top"},
+		{"id":"f-o","fromNode":"facts","fromSide":"bottom","toNode":"options","toSide":"left"},
+		{"id":"h-o","fromNode":"hypotheses","fromSide":"bottom","toNode":"options","toSide":"right"},
+		{"id":"o-d","fromNode":"options","fromSide":"bottom","toNode":"decision","toSide":"top"},
+		{"id":"o-n","fromNode":"options","fromSide":"bottom","toNode":"next","toSide":"top"},
+		{"id":"d-n","fromNode":"decision","fromSide":"right","toNode":"next","toSide":"left","label":"行動へ"}
+	]
+}

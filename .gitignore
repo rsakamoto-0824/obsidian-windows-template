@@ -1,0 +1,30 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+.trash/
+
+# 端末ごとの画面状態・キャッシュ
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/logs/
+
+# このリポジトリはテンプレート配布用。個人ノートは追跡しない
+Daily/*
+!Daily/.gitkeep
+Excalidraw/*
+!Excalidraw/.gitkeep
+Refs/*
+!Refs/.gitkeep
+Pages/*
+!Pages/*.base
+
+# 移行データはテンプレートへ含めない
+OneNote/
+Obsidian-Private-Hold-*/
+
+# 認証情報・環境ファイル
+.env
+.env.*
+*.pem
+*.key

@@ -1,0 +1,25 @@
+filters:
+  and:
+    - file.tags.contains("task")
+    - file.name != "TasksTable.base"
+views:
+  - type: table
+    name: タスクノート
+    order:
+      - file.name
+      - status
+      - priority
+      - due
+      - file.mtime
+    sort:
+      - property: due
+        direction: ASC
+      - property: priority
+        direction: ASC
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 280
+      note.status: 100
+      note.priority: 90
+      note.due: 120

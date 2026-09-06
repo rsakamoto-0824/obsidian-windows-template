@@ -1,0 +1,25 @@
+filters:
+  and:
+    - file.tags.contains("schedule")
+    - file.name != "Schedule.base"
+views:
+  - type: table
+    name: 全予定
+    order:
+      - file.name
+      - scheduled
+      - start
+      - end
+      - status
+      - file.mtime
+    sort:
+      - property: scheduled
+        direction: ASC
+      - property: start
+        direction: ASC
+    columnSize:
+      file.name: 280
+      note.scheduled: 120
+      note.start: 80
+      note.end: 80
+      note.status: 100
